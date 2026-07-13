@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ORASCOM Building & Construction Co. | Building Materials Supplier | Qatar</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#0D2B4E;
+  --navy-mid:#1A3F6F;
+  --navy-light:#2B5F9E;
+  --blue:#3B7DD8;
+  --blue-light:#5B9AE8;
+  --sky:#EBF3FF;
+  --sky-mid:#D6E8FF;
+  --orange:#F5820A;
+  --orange-light:#FF9D2F;
+  --white:#FFFFFF;
+  --off-white:#F8FAFD;
+  --gray-50:#F1F5FB;
+  --gray-100:#E2EAF4;
+  --gray-200:#C8D8EE;
+  --gray-400:#8FA8CC;
+  --gray-600:#4A6080;
+  --gray-800:#1E2D40;
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'Inter',system-ui,sans-serif;
+  --nav-h:68px;
+  --radius:8px;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--white);color:var(--navy);overflow-x:hidden;font-size:16px;line-height:1.6}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  height:var(--nav-h);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 60px;
+  background:rgba(255,255,255,0.97);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--gray-100);
+  box-shadow:0 1px 20px rgba(13,43,78,0.08);
+  transition:box-shadow .3s;
+}
+.nav-brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.nav-logo-box{
+  width:40px;height:40px;background:var(--navy);border-radius:6px;
+  display:flex;align-items:center;justify-content:center;
+}
+.nav-logo-box svg{color:#fff}
+.nav-logo-img{height:42px;width:auto;display:block;object-fit:contain}
+.nav-brand-name{font-family:var(--serif);font-size:18px;font-weight:700;color:var(--navy);display:block;line-height:1.1}
+.nav-brand-sub{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gray-400);font-family:var(--sans)}
+.nav-links{display:flex;gap:32px;list-style:none;align-items:center}
+.nav-links a{font-size:12px;font-weight:500;letter-spacing:.05em;color:var(--gray-600);text-decoration:none;transition:color .2s;padding:4px 0;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:var(--blue);transition:width .3s;border-radius:2px}
+.nav-links a:hover{color:var(--navy)}
+.nav-links a:hover::after{width:100%}
+.nav-cta{
+  padding:10px 24px;background:var(--navy);color:#fff !important;
+  border-radius:6px;font-size:12px;font-weight:500;letter-spacing:.04em;
+  transition:background .2s,transform .15s;
+}
+.nav-cta:hover{background:var(--navy-mid) !important;transform:translateY(-1px)}
+.nav-cta::after{display:none !important}
+
+/* ── HERO ── */
+#hero{
+  min-height:100vh;padding-top:var(--nav-h);
+  background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 60%,#1E4D8C 100%);
+  position:relative;overflow:hidden;
+  display:flex;flex-direction:column;
+}
+.hero-bg-pattern{
+  position:absolute;inset:0;
+  background-image:
+    radial-gradient(circle at 70% 30%, rgba(59,125,216,0.25) 0%, transparent 50%),
+    radial-gradient(circle at 20% 80%, rgba(245,130,10,0.1) 0%, transparent 40%);
+}
+.hero-grid-lines{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+  background-size:60px 60px;
+}
+.hero-content{
+  flex:1;display:grid;grid-template-columns:1fr 1fr;
+  max-width:1300px;margin:0 auto;width:100%;
+  padding:80px 60px 60px;gap:60px;align-items:center;
+}
+.hero-left{position:relative;z-index:2}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(59,125,216,0.2);border:1px solid rgba(59,125,216,0.4);
+  border-radius:50px;padding:6px 16px;margin-bottom:28px;
+}
+.hero-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--orange);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.6;transform:scale(1.3)}}
+.hero-badge-text{font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.75)}
+.hero-h1{
+  font-family:var(--serif);
+  font-size:clamp(42px,5.5vw,72px);
+  font-weight:700;line-height:1.08;
+  color:#fff;margin-bottom:24px;
+}
+.hero-h1 .accent{color:var(--orange-light)}
+.hero-h1 .italic{font-style:italic;color:var(--blue-light)}
+.hero-p{
+  font-size:16px;color:rgba(255,255,255,.65);
+  line-height:1.8;max-width:420px;margin-bottom:44px;font-weight:300;
+}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.hbtn-primary{
+  padding:14px 32px;background:var(--orange);color:#fff;
+  font-size:13px;font-weight:600;letter-spacing:.04em;
+  border-radius:6px;text-decoration:none;transition:background .2s,transform .15s;
+}
+.hbtn-primary:hover{background:var(--orange-light);transform:translateY(-2px)}
+.hbtn-secondary{
+  padding:14px 32px;background:rgba(255,255,255,.1);color:#fff;
+  font-size:13px;font-weight:500;letter-spacing:.04em;border-radius:6px;
+  text-decoration:none;border:1px solid rgba(255,255,255,.2);
+  transition:background .2s;
+}
+.hbtn-secondary:hover{background:rgba(255,255,255,.18)}
+.hero-right{position:relative;z-index:2}
+.hero-img-stack{position:relative;height:460px}
+.himg-main{
+  position:absolute;right:0;top:0;
+  width:82%;height:340px;
+  border-radius:12px;overflow:hidden;
+  box-shadow:0 24px 60px rgba(0,0,0,0.4);
+}
+.himg-main img{width:100%;height:100%;object-fit:cover}
+.himg-accent{
+  position:absolute;left:0;bottom:0;
+  width:50%;height:200px;
+  border-radius:10px;overflow:hidden;
+  box-shadow:0 16px 40px rgba(0,0,0,0.35);
+  border:3px solid var(--navy-mid);
+}
+.himg-accent img{width:100%;height:100%;object-fit:cover}
+.iso-pill{
+  position:absolute;top:20px;left:20px;
+  background:var(--orange);color:#fff;
+  border-radius:6px;padding:10px 16px;
+  font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  box-shadow:0 4px 16px rgba(245,130,10,.4);
+}
+.hero-stats{
+  background:rgba(255,255,255,.06);
+  border-top:1px solid rgba(255,255,255,.08);
+  display:grid;grid-template-columns:repeat(4,1fr);
+}
+.hstat{
+  padding:22px 32px;
+  border-right:1px solid rgba(255,255,255,.06);
+  text-align:center;
+}
+.hstat:last-child{border-right:none}
+.hstat-num{font-family:var(--serif);font-size:32px;font-weight:700;color:var(--orange-light);line-height:1;margin-bottom:4px}
+.hstat-label{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+
+/* ── SHARED ── */
+.section-label{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--blue);margin-bottom:14px;
+}
+.section-label::before{content:'';width:24px;height:2px;background:var(--orange);border-radius:2px}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:none}
+.rd1{transition-delay:.1s}.rd2{transition-delay:.2s}.rd3{transition-delay:.3s}.rd4{transition-delay:.4s}
+
+/* ── INTRO ── */
+#intro{background:var(--off-white);padding:100px 60px}
+.intro-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+#intro h2{font-family:var(--serif);font-size:clamp(32px,4vw,50px);font-weight:700;line-height:1.12;color:var(--navy);margin-bottom:20px}
+#intro h2 em{font-style:italic;color:var(--blue)}
+.body-p{font-size:15px;color:var(--gray-600);line-height:1.85;margin-bottom:16px;font-weight:300}
+.checklist{display:flex;flex-direction:column;gap:12px;margin-top:28px}
+.chk{display:flex;align-items:flex-start;gap:12px}
+.chk-icon{
+  width:22px;height:22px;border-radius:50%;
+  background:var(--sky);border:2px solid var(--blue);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;margin-top:1px;
+}
+.chk-icon svg{color:var(--blue)}
+.chk-text{font-size:13.5px;color:var(--gray-600);line-height:1.5}
+.chk-text strong{color:var(--navy);display:block;font-size:14px;font-weight:500}
+.intro-img-wrap{position:relative;height:500px}
+.intro-img-main{
+  position:absolute;right:0;top:0;
+  width:80%;height:360px;border-radius:12px;overflow:hidden;
+  box-shadow:0 20px 50px rgba(13,43,78,.15);
+}
+.intro-img-main img{width:100%;height:100%;object-fit:cover}
+.intro-img-badge{
+  position:absolute;left:0;bottom:0;
+  width:52%;height:210px;
+  background:linear-gradient(135deg,var(--navy),var(--navy-mid));
+  border-radius:10px;
+  display:flex;flex-direction:column;justify-content:center;padding:28px;
+  box-shadow:0 12px 32px rgba(13,43,78,.25);
+}
+.badge-num{font-family:var(--serif);font-size:52px;font-weight:700;color:var(--orange-light);line-height:1}
+.badge-label{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:8px;line-height:1.4}
+
+/* ── WHY QATAR ── */
+#why-qatar{background:var(--navy);padding:100px 60px;position:relative;overflow:hidden}
+#why-qatar::before{
+  content:'';position:absolute;top:-60px;right:-60px;
+  width:400px;height:400px;
+  background:radial-gradient(circle,rgba(59,125,216,.15) 0%,transparent 70%);
+}
+.wq-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+#why-qatar .section-label{color:var(--blue-light)}
+#why-qatar .section-label::before{background:var(--orange)}
+#why-qatar h2{font-family:var(--serif);font-size:clamp(30px,3.5vw,46px);font-weight:700;color:#fff;margin-bottom:20px;line-height:1.12}
+#why-qatar h2 em{font-style:italic;color:var(--orange-light)}
+.wq-text{font-size:14.5px;color:rgba(255,255,255,.6);line-height:1.85;font-weight:300;margin-bottom:32px}
+.wq-stats{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.wq-stat{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.07);
+  padding:28px 24px;
+  transition:background .3s;
+}
+.wq-stat:hover{background:rgba(59,125,216,.12)}
+.wq-stat-num{font-family:var(--serif);font-size:38px;font-weight:700;color:var(--orange-light);line-height:1;margin-bottom:6px}
+.wq-stat-label{font-size:11px;color:rgba(255,255,255,.45);letter-spacing:.1em;text-transform:uppercase;line-height:1.4}
+.wq-img-col{display:flex;flex-direction:column;gap:16px}
+.wq-img-main{border-radius:10px;overflow:hidden;height:280px;box-shadow:0 16px 40px rgba(0,0,0,.3)}
+.wq-img-main img{width:100%;height:100%;object-fit:cover}
+.wq-fact-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.wq-fact{
+  background:rgba(245,130,10,.12);
+  border:1px solid rgba(245,130,10,.2);
+  border-radius:8px;padding:16px;
+}
+.wq-fact-title{font-size:12px;font-weight:600;color:var(--orange-light);margin-bottom:4px;letter-spacing:.04em}
+.wq-fact-text{font-size:11.5px;color:rgba(255,255,255,.5);line-height:1.5}
+
+/* ── WHY ORASCOM ── */
+#why-orascom{background:var(--white);padding:100px 60px}
+.wo-inner{max-width:1200px;margin:0 auto}
+.wo-top{text-align:center;margin-bottom:56px}
+#why-orascom h2{font-family:var(--serif);font-size:clamp(30px,4vw,50px);font-weight:700;color:var(--navy);line-height:1.1;margin-bottom:12px}
+#why-orascom h2 em{font-style:italic;color:var(--blue)}
+.wo-sub{max-width:540px;margin:0 auto;font-size:15px;color:var(--gray-600);font-weight:300;line-height:1.8}
+.wo-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:40px}
+.wo-card{
+  background:var(--off-white);border:1px solid var(--gray-100);
+  border-radius:12px;padding:36px 28px;
+  transition:box-shadow .3s,transform .3s;
+}
+.wo-card:hover{box-shadow:0 12px 40px rgba(13,43,78,.1);transform:translateY(-4px)}
+.wo-card-icon{
+  width:52px;height:52px;border-radius:10px;
+  background:var(--sky);display:flex;align-items:center;justify-content:center;
+  margin-bottom:20px;color:var(--blue);
+}
+.wo-card-title{font-family:var(--serif);font-size:22px;font-weight:700;color:var(--navy);margin-bottom:10px}
+.wo-card-text{font-size:13.5px;color:var(--gray-600);line-height:1.75;font-weight:300}
+.core-bar{
+  background:linear-gradient(135deg,var(--navy),var(--navy-mid));
+  border-radius:12px;padding:40px 48px;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:0;
+}
+.cv{padding:0 32px;border-right:1px solid rgba(255,255,255,.1)}
+.cv:first-child{padding-left:0}
+.cv:last-child{border-right:none}
+.cv-title{font-family:var(--serif);font-size:22px;font-weight:700;color:var(--orange-light);margin-bottom:8px}
+.cv-body{font-size:13px;color:rgba(255,255,255,.55);line-height:1.6}
+
+/* ── PRODUCTS ── */
+#products{background:var(--gray-50);padding:100px 60px}
+.prod-inner{max-width:1200px;margin:0 auto}
+.prod-top{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px}
+#products h2{font-family:var(--serif);font-size:clamp(30px,4vw,50px);font-weight:700;color:var(--navy);line-height:1.1}
+#products h2 em{font-style:italic;color:var(--blue)}
+.prod-count{font-size:13px;color:var(--gray-400);font-weight:300}
+.prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.prod-card{
+  background:var(--white);border:1px solid var(--gray-100);
+  border-radius:12px;overflow:hidden;
+  transition:box-shadow .3s,transform .3s;
+}
+.prod-card:hover{box-shadow:0 16px 48px rgba(13,43,78,.12);transform:translateY(-4px)}
+.prod-card-img{height:180px;overflow:hidden;position:relative;background:var(--sky)}
+.prod-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.prod-card:hover .prod-card-img img{transform:scale(1.06)}
+.prod-card-img-placeholder{
+  width:100%;height:100%;
+  display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,var(--sky),var(--sky-mid));
+}
+.prod-card-num{
+  position:absolute;top:12px;right:12px;
+  background:rgba(13,43,78,.7);color:#fff;
+  font-size:10px;font-weight:600;letter-spacing:.1em;
+  padding:4px 10px;border-radius:20px;
+}
+.prod-card-body{padding:22px 24px 24px}
+.prod-card-name{font-family:var(--serif);font-size:18px;font-weight:700;color:var(--navy);margin-bottom:8px;line-height:1.2}
+.prod-card-desc{font-size:12.5px;color:var(--gray-600);line-height:1.7;font-weight:300}
+.prod-card-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.ptag{
+  font-size:10px;font-weight:500;letter-spacing:.08em;
+  padding:4px 10px;border-radius:4px;
+  background:var(--sky);color:var(--blue);
+}
+
+/* ── QUALITY ── */
+#quality{background:var(--white);padding:100px 60px}
+.q-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+#quality h2{font-family:var(--serif);font-size:clamp(30px,3.5vw,46px);font-weight:700;color:var(--navy);line-height:1.12;margin-bottom:20px}
+#quality h2 em{font-style:italic;color:var(--blue)}
+.q-lead{font-size:15px;color:var(--gray-600);line-height:1.85;font-weight:300;margin-bottom:32px}
+.q-list{display:flex;flex-direction:column;gap:14px}
+.q-item{display:flex;align-items:flex-start;gap:14px;padding:16px;background:var(--off-white);border-radius:8px;border:1px solid var(--gray-100)}
+.q-icon{
+  width:32px;height:32px;border-radius:6px;
+  background:var(--sky);display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;color:var(--blue);
+}
+.q-text{font-size:13.5px;color:var(--gray-600);line-height:1.6}
+.iso-card{
+  background:linear-gradient(160deg,var(--navy),var(--navy-mid));
+  border-radius:16px;padding:40px;text-align:center;
+  box-shadow:0 20px 60px rgba(13,43,78,.2);position:relative;overflow:hidden;
+}
+.iso-card::before{
+  content:'';position:absolute;top:-40px;right:-40px;
+  width:180px;height:180px;
+  background:radial-gradient(circle,rgba(245,130,10,.15) 0%,transparent 70%);
+}
+.iso-mark{font-family:var(--serif);font-size:52px;font-weight:700;color:var(--orange-light);letter-spacing:.02em;margin-bottom:6px}
+.iso-year{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:28px}
+.iso-divider{width:48px;height:2px;background:var(--orange);margin:0 auto 28px;border-radius:2px}
+.iso-body{font-size:13.5px;color:rgba(255,255,255,.6);line-height:1.8;margin-bottom:24px}
+.iso-scope{
+  background:rgba(245,130,10,.1);border:1px solid rgba(245,130,10,.25);
+  border-radius:8px;padding:16px;
+}
+.iso-scope-title{font-size:10px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--orange-light);margin-bottom:6px}
+.iso-scope-text{font-size:12.5px;color:rgba(255,255,255,.55);line-height:1.65}
+.iso-footer{margin-top:20px;font-size:11px;color:rgba(255,255,255,.3);line-height:1.6}
+
+/* ── CONTACT ── */
+#contact{background:var(--gray-50);padding:100px 60px}
+.con-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1.2fr;gap:80px;align-items:start}
+#contact h2{font-family:var(--serif);font-size:clamp(30px,3.5vw,46px);font-weight:700;color:var(--navy);line-height:1.12;margin-bottom:16px}
+#contact h2 em{font-style:italic;color:var(--blue)}
+.con-sub{font-size:14.5px;color:var(--gray-600);line-height:1.8;font-weight:300;margin-bottom:36px}
+.con-details{display:flex;flex-direction:column;gap:0}
+.cdet{
+  display:flex;align-items:flex-start;gap:16px;
+  padding:18px 0;border-bottom:1px solid var(--gray-100);
+}
+.cdet:last-child{border-bottom:none}
+.cdet-icon{
+  width:40px;height:40px;border-radius:8px;
+  background:var(--sky);display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;color:var(--blue);
+}
+.cdet-label{font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gray-400);margin-bottom:3px}
+.cdet-value{font-size:14px;color:var(--navy);font-weight:400;line-height:1.5}
+.cform{
+  background:var(--white);border-radius:16px;
+  padding:40px;border:1px solid var(--gray-100);
+  box-shadow:0 8px 32px rgba(13,43,78,.06);
+}
+.cform-title{font-family:var(--serif);font-size:22px;font-weight:700;color:var(--navy);margin-bottom:24px}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fg{display:flex;flex-direction:column;gap:6px}
+.fg.full{grid-column:1/-1}
+.flabel{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-600)}
+.finput,.fselect,.ftextarea{
+  background:var(--off-white);
+  border:1.5px solid var(--gray-100);
+  color:var(--navy);padding:12px 16px;
+  font-family:var(--sans);font-size:14px;
+  border-radius:8px;outline:none;
+  transition:border-color .25s,background .25s;width:100%;
+}
+.finput::placeholder,.ftextarea::placeholder{color:var(--gray-400)}
+.finput:focus,.fselect:focus,.ftextarea:focus{border-color:var(--blue);background:var(--sky)}
+.fselect option{background:#fff;color:var(--navy)}
+.ftextarea{resize:vertical;min-height:110px}
+.fsubmit{
+  margin-top:6px;width:100%;padding:15px;
+  background:var(--navy);color:#fff;
+  font-size:13px;font-weight:600;letter-spacing:.06em;
+  border:none;border-radius:8px;cursor:pointer;
+  transition:background .2s,transform .15s;font-family:var(--sans);
+}
+.fsubmit:hover{background:var(--navy-mid);transform:translateY(-1px)}
+
+/* ── FOOTER ── */
+footer{
+  background:var(--navy);
+  padding:56px 60px 32px;
+}
+.foot-top{
+  display:grid;grid-template-columns:1.5fr 1fr 1fr;
+  gap:48px;padding-bottom:40px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+  margin-bottom:28px;
+}
+.foot-brand-name{font-family:var(--serif);font-size:22px;font-weight:700;color:#fff;margin-bottom:4px}
+.foot-brand-sub{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:16px}
+.foot-brand-desc{font-size:13px;color:rgba(255,255,255,.45);line-height:1.75;font-weight:300}
+.foot-col-title{font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:16px}
+.foot-links{list-style:none;display:flex;flex-direction:column;gap:10px}
+.foot-links a{font-size:13.5px;color:rgba(255,255,255,.55);text-decoration:none;transition:color .2s}
+.foot-links a:hover{color:var(--orange-light)}
+.foot-contact-item{font-size:13px;color:rgba(255,255,255,.5);margin-bottom:8px;line-height:1.5}
+.foot-contact-item a{color:rgba(255,255,255,.5);text-decoration:none}
+.foot-contact-item a:hover{color:var(--orange-light)}
+.foot-bottom{display:flex;justify-content:space-between;align-items:center}
+.foot-copy{font-size:12px;color:rgba(255,255,255,.3)}
+.foot-iso{font-size:11px;color:var(--orange-light);font-weight:500;letter-spacing:.06em}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  nav{padding:0 24px}
+  .nav-links{gap:16px}
+  .hero-content{grid-template-columns:1fr;padding:60px 28px 40px;gap:40px}
+  .hero-img-stack{height:280px}
+  .hero-stats{grid-template-columns:repeat(2,1fr)}
+  .intro-inner,.wq-inner,.q-inner,.con-inner{grid-template-columns:1fr;padding:0}
+  #intro,#why-qatar,#why-orascom,#products,#quality,#contact{padding:70px 28px}
+  .wo-cards{grid-template-columns:1fr}
+  .core-bar{grid-template-columns:1fr;gap:24px}
+  .cv{padding:0;border-right:none;border-bottom:1px solid rgba(255,255,255,.1);padding-bottom:20px}
+  .cv:last-child{border-bottom:none;padding-bottom:0}
+  .prod-grid{grid-template-columns:1fr 1fr}
+  .prod-top{flex-direction:column;align-items:flex-start;gap:8px}
+  .intro-img-wrap{height:340px}
+  .wq-stats{grid-template-columns:1fr 1fr}
+  footer{padding:40px 24px 24px}
+  .foot-top{grid-template-columns:1fr;gap:32px}
+  .foot-bottom{flex-direction:column;gap:8px;text-align:center}
+}
+@media(max-width:680px){
+  .nav-links{display:none}
+  .prod-grid{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr}
+  .wq-fact-cards{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-brand">
+    <img src="orascom-logo.jpg" alt="ORASCOM Building & Construction Co." class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="#intro">About</a></li>
+    <li><a href="#why-qatar">Why Qatar</a></li>
+    <li><a href="#why-orascom">Why Us</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#quality">Quality</a></li>
+    <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-grid-lines"></div>
+  <div class="hero-content">
+    <div class="hero-left reveal">
+      <img src="orascom-logo-dark.png" alt="ORASCOM" style="height:52px;width:auto;margin-bottom:28px;filter:brightness(0) invert(1);display:block;">
+      <div class="hero-badge">
+        <div class="hero-badge-dot"></div>
+        <span class="hero-badge-text">ISO 9001:2008 Certified · Doha, Qatar</span>
+      </div>
+      <h1 class="hero-h1">
+        Supply &amp; <span class="italic">Installation</span><br>
+        of Specialized<br>
+        <span class="accent">Building Materials.</span>
+      </h1>
+      <p class="hero-p">Orascom Building & Construction Co. — a specialized trading company established in Qatar in 2010. Professionalism, teamwork, and quality are at the core of everything we deliver.</p>
+      <div class="hero-btns">
+        <a href="#products" class="hbtn-primary">View All 15 Products</a>
+        <a href="#contact" class="hbtn-secondary">Request a Quote →</a>
+      </div>
+    </div>
+    <div class="hero-right reveal rd2">
+      <div class="hero-img-stack">
+        <div class="himg-main">
+          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80" alt="Construction site interior" loading="lazy">
+        </div>
+        <div class="himg-accent">
+          <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&q=80" alt="Building materials" loading="lazy">
+        </div>
+        <div class="iso-pill">ISO 9001:2008</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="hstat"><div class="hstat-num">2010</div><div class="hstat-label">Established in Qatar</div></div>
+    <div class="hstat"><div class="hstat-num">15+</div><div class="hstat-label">Product Categories</div></div>
+    <div class="hstat"><div class="hstat-num">ISO</div><div class="hstat-label">9001:2008 Certified</div></div>
+    <div class="hstat"><div class="hstat-num">QAR</div><div class="hstat-label">Qatar Based Office</div></div>
+  </div>
+</section>
+
+<!-- INTRO / ABOUT -->
+<section id="intro">
+  <div class="intro-inner">
+    <div>
+      <div class="section-label reveal">Introduction</div>
+      <h2 class="reveal rd1">Specialists in <em>Building & Construction</em> Materials</h2>
+      <p class="body-p reveal rd2">ORASCOM is a specialized trading company for building and construction materials, established in Qatar in 2010 by a youthful, vivid, and multinational team that has won a high reputation within its client network.</p>
+      <p class="body-p reveal rd2">To meet the diverse requirements of Qatar's construction market, we continuously expand our business model and products — delivering stable, competitive pricing and on-time supply.</p>
+      <div class="checklist reveal rd3">
+        <div class="chk"><div class="chk-icon"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5L4.5 8L9 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="chk-text"><strong>Quality of customer service</strong>Dedicated care in every client interaction.</div></div>
+        <div class="chk"><div class="chk-icon"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5L4.5 8L9 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="chk-text"><strong>Quality & variety of products range</strong>A broad selection of premium building materials.</div></div>
+        <div class="chk"><div class="chk-icon"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5L4.5 8L9 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="chk-text"><strong>Best team environment</strong>A multinational, motivated workforce.</div></div>
+        <div class="chk"><div class="chk-icon"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5L4.5 8L9 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="chk-text"><strong>Professionalism & consistency</strong>The main yardstick for long-term success.</div></div>
+      </div>
+    </div>
+    <div class="intro-img-wrap reveal rd2">
+      <div class="intro-img-main">
+        <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=700&q=80" alt="Modern building construction" loading="lazy">
+      </div>
+      <div class="intro-img-badge">
+        <div class="badge-num">15+</div>
+        <div class="badge-label">Years serving Qatar's construction industry</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY QATAR -->
+<section id="why-qatar">
+  <div class="wq-inner">
+    <div>
+      <div class="section-label reveal">Why Qatar</div>
+      <h2 class="reveal rd1">The Middle East's Most <em>Competitive</em> Economy</h2>
+      <p class="wq-text reveal rd2">The World Economic Forum has ranked Qatar as the most competitive economy in the Middle East — backed by a high-quality institutional framework, stable macroeconomic conditions, and a strong commitment to public infrastructure spending.</p>
+      <div class="wq-stats reveal rd3">
+        <div class="wq-stat"><div class="wq-stat-num">$150B</div><div class="wq-stat-label">National Vision 2030 spend</div></div>
+        <div class="wq-stat"><div class="wq-stat-num">$40B</div><div class="wq-stat-label">Railways investment</div></div>
+        <div class="wq-stat"><div class="wq-stat-num">$20B</div><div class="wq-stat-label">Roads investment</div></div>
+        <div class="wq-stat"><div class="wq-stat-num">$15.5B</div><div class="wq-stat-label">New airport</div></div>
+      </div>
+    </div>
+    <div class="wq-img-col reveal rd2">
+      <div class="wq-img-main">
+        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=700&q=80" alt="Doha skyline" loading="lazy">
+      </div>
+      <div class="wq-fact-cards">
+        <div class="wq-fact"><div class="wq-fact-title">Vision 2030</div><div class="wq-fact-text">National development plan driving billions in infrastructure investment.</div></div>
+        <div class="wq-fact"><div class="wq-fact-title">Sustainable Growth</div><div class="wq-fact-text">Qatar committed to carbon-neutral development and green building standards.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY ORASCOM -->
+<section id="why-orascom">
+  <div class="wo-inner">
+    <div class="wo-top reveal">
+      <div class="section-label" style="justify-content:center">Why ORASCOM</div>
+      <h2>Built on <em>Excellence</em>, Integrity & Pride</h2>
+      <p class="wo-sub">We have made a substantial investment in human resources. Our sales force provides the latest market and product information — ensuring competitive pricing and on-time delivery.</p>
+    </div>
+    <div class="wo-cards">
+      <div class="wo-card reveal">
+        <div class="wo-card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+        <div class="wo-card-title">Excellence</div>
+        <div class="wo-card-text">Highest quality in every product line. We supply only materials that meet or exceed international standards — measured by quality of customer service and product range.</div>
+      </div>
+      <div class="wo-card reveal rd1">
+        <div class="wo-card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M8 12L11 15L16 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="wo-card-title">Integrity</div>
+        <div class="wo-card-text">Outstanding customer service backed by honesty and transparency. Our track record ensures clients benefit from stable, competitive pricing and reliable delivery.</div>
+      </div>
+      <div class="wo-card reveal rd2">
+        <div class="wo-card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <div class="wo-card-title">Service with Pride</div>
+        <div class="wo-card-text">A highly effective multinational team committed to enhancement of the company's image through professionalism and consistency as the main yardstick for long-term success.</div>
+      </div>
+    </div>
+    <div class="core-bar reveal rd2">
+      <div class="cv"><div class="cv-title">Excellence</div><div class="cv-body">Highest quality across all company products and every business area we operate in.</div></div>
+      <div class="cv"><div class="cv-title">Integrity</div><div class="cv-body">Outstanding customer service with transparency and honesty at every step.</div></div>
+      <div class="cv"><div class="cv-title">Service with Pride</div><div class="cv-body">Highly effective business operations that consistently deliver real results.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="prod-inner">
+    <div class="prod-top reveal">
+      <div>
+        <div class="section-label">Item List</div>
+        <h2>Our <em>Product</em> Range</h2>
+      </div>
+      <p class="prod-count">15 specialized product categories</p>
+    </div>
+    <div class="prod-grid">
+
+      <div class="prod-card reveal">
+        <div class="prod-card-img">
+          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=500&q=75" alt="Gypsum Plasterboard" loading="lazy">
+          <span class="prod-card-num">01</span>
+        </div>
+        <div class="prod-card-body">
+          <div class="prod-card-name">Gypsum Plasterboard</div>
+          <p class="prod-card-desc">80% pure gypsum blend — light weight, high strength. Available in Regular, Moisture Resistant, Fire Resistant, Moisture & Fire, Acoustical, and Perforated types.</p>
+          <div class="prod-card-tags"><span class="ptag">6 Types</span><span class="ptag">80% Pure Gypsum</span><span class="ptag">High Strength</span></div>
+        </div>
+      </div>
+
+      <div class="prod-card reveal rd1">
+        <div class="prod-card-img">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=75" alt="Gypsum Plaster" loading="lazy">
+          <span class="prod-card-num">02</span>
+        </div>
+        <div class="prod-card-body">
+          <div class="prod-card-name">Gypsum Plaster</div>
+          <p class="prod-card-desc">Calcium sulfate hemi hydrate, indirect heat calcination — superior quality, fineness and snow-white color. Naturally odorless and regulates air moisture.</p>
+          <div class="prod-card-tags"><span class="ptag">Snow White</span><span class="ptag">Natural Origin</span><span class="ptag">Odorless</span></div>
+        </div>
+      </div>
+
+      <div class="prod-card reveal rd2">
+        <div class="prod-card-img">
+          <img src="https://images.unsplash.com/photo-1567705323043-b2e6bfd8b30c?w=500&q=75" alt="Fiber Cement Board" loading="lazy">
+          <span class="prod-card-num">03</span>
+        </div>
+        <div class="prod-card-body">
+          <div class="prod-card-name">Fiber Cement Board</div>
+          <p class="prod-card-desc">Cement, Pozzolana, cellulose fiber and siliceous binders. Excellent moisture resistance, water resistance, fire retardant and sound insulation.</p>
+          <div class="prod-card-tags"><span class="ptag">Fire Retardant</span><span class="ptag">Water Resistant</span><span class="ptag">Sound Insulation</span></div>
+        </div>
+      </div>
+
+      <div class="prod-card reveal">
+        <div class="prod-card-img">
+          <div class="prod-card-img-placeholder">
+            <svg width="56" height="56" viewBox="0 0 56 56" fill="none"><rect x="8" y="20" width="40" height="6" rx="2" fill="#3B7DD8" opacity=".3"/><rect x="8" y="30" width="40" height="6" rx="2" fill="#3B7DD8" opacity=".2"/><rect x="8" y="40" width="40" height="6" rx="2" fill="#3B7DD8" opacity=".1"/><rect x="14" y="10" width="4" height="36" rx="1" fill="#3B7DD8" opacity=".4"/><rect x="26" y="10" width="4" height="36" rx="1" fill="#3B7DD8" opacity=".4"/><rect x="38" y="10" width="4" height="36" rx="1" fill="#3B7DD8" opacity=".4"/></svg>
+          </div>
+          <span class="prod-card-num">04</span>
+        </div>
+        <div class="prod-card-body">
+          <div class="prod-card-name">Drywall Metal Sections</div>
+          <p class="prod-card-desc">Complete range: Studs, Runners, Furring Channels, Ceiling Channels and Wall Angles. Covering Hat Channel, CD 60, Partition and Cladding systems.</p>
+          <div class="prod-card-tags"><span class="ptag">Studs & Runners</span><span class="ptag">Ceiling Systems</span><span class="ptag">Partition</span></div>
+        </div>
+      </div>
+
+      <div class="prod-card reveal rd1">
+        <div class="prod-card-img">
+          <div class="prod-card-img-placeholder">
+            <svg width="56" height="56" viewBox="0 0 56 56" fill="none"><line x1="12" y1="28" x2="44" y2="28" stroke="#3B7DD8" stroke-width="3" opacity=".4"/><rect x="18" y="16" width="6" height="24" rx="1" fill="#3B7DD8" opacity=".3"/><rect x="32" y="16" width="6" height="24" rx="1" fill="#3B7DD8" opacity=".3"/><circle cx="21" cy="14" r="3" stroke="#F5820A" stroke-width="2" opacity=".6"/><circle cx="35" cy="14" r="3" stroke="#F5820A" stroke-width="2" opacity=".6"/></svg>
+          </div>
+          <span class="prod-card-num">05</span>
+        </div>
+        <div class="prod-card-body">
+          <div class="prod-card-name">Drywall Metal Accessories</div>
+          <p class="prod-card-desc">Wide range of pre-fabricated ceiling suspension and support brackets — threaded rods, ceiling brackets, rod hangers and universal brackets for drywall partitions.</p>
+          <div class="prod-card-tags"><span class="ptag">Ceiling Brackets</span><span class="ptag">Rod Hangers</span><span class="ptag">Wall Lining</span></div>
+        </div>
+      </div>
+
+      <div class="prod-card reveal rd2">
+        <div class="prod-card-img">
+          <img src="https://images.unsplash.com/photo-1609205807107-2e0b61720de8?w=500&q=75" alt="Drywall Accessories" loading="lazy">
+          <span class="prod-card-num">06</span>
+        </div>
+        <div class="prod-card-body">
+          <div class="prod-card-name">Drywall Accessories</div>
+          <p class="prod-card-desc">Full range including PVC beads, tapes, screws, fasteners, fire and acoustical sealant. Always current with ever-changing trends and innovative materials.</p>
+          <div class="prod-card-tags"><span class="ptag">PVC Beads</span><span class="ptag">Fire Sealant</span><span class="ptag">Fasteners</span></div>
+        </div>
+      </div>
+
+      <div class="prod-card reveal">
+        <div class="prod-card-img">
+          <div class="prod-card-img-placeholder">
+            <svg width="56" height="56" viewBox="0 0 56 56" fill="none"><rect x="14" y="12" width="28" height="32" rx="2" stroke="#3B7DD8" stroke-width="2" opacity=".4" fill="none"/><rect x="18" y="16" width="20" height="4" rx="1" fill="#3B7DD8" opacity=".2"/><circle cx="36" cy="28" r="4" stroke="#F5820A" stroke-width="1.5" opacity=".6"/><rect x="14" y="38" width="5" height="6" rx="1" fill="#3B7DD8" opacity=".3"/><rect x="37" y="38" width="5" height="6" rx="1" fill="#3B7DD8" opacity=".3"/></svg>
+          </div>
+          <span class="prod-card-num">07</span>
+        </div>
+        <div class="prod-card-body">
+          <div class="prod-card-name">Access Panels</div>
+          <p class="prod-card-desc">Designed for hospitals, schools and hotels. Suitable for partitions and ceilings — available in large variety of size options and various lock types.</p>
+          <div class="prod-card-tags"><span class="ptag">Partitions</span><span class="ptag">Multiple Sizes</span><span class="ptag">Various Locks</span></div>
+        </div>
+      </div>
+
+      <div class="prod-card reveal rd1">
+        <div class="prod-card-img">
+          <img src="https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=500&q=75" alt="Jointing Compound" loading="lazy">
+          <span class="prod-card-num">08</span>
+        </div>
+        <div class="prod-card-body">
+          <div class="prod-card-name">Jointing & Finishing Compound</div>
+          <p class="prod-card-desc">White plaster-like substance for embedding, finishing and hand-applied texturing. Used with joint tape to seal joints between drywall sheets in building construction.</p>
+          <div class="prod-card-tags"><span class="ptag">Embedding</span><span class="ptag">Finishing</span><span class="ptag">Texturing</span></div>
+        </div>
+      </div>
+
+      <div class="prod-card reveal rd2">
+        <div class="prod-card-img">
+          <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=500&q=75" alt="Mineral Insulation" loading="lazy">
+          <span class="prod-card-num">09</span>
+        </div>
+        <div class="prod-card-body">
+          <div class="prod-card-name">Mineral Insulation</div>
+          <p class="prod-card-desc">Glass wool & Stone wool from natural or synthetic minerals. Excellent thermal & acoustic properties — light in weight and easy to handle and cut to intricate shapes.</p>
+          <div class="prod-card-tags"><span class="ptag">Thermal</span><span class="ptag">Acoustic</span><span class="ptag">Light Weight</span></div>
+        </div>
+      </div>
+
+      <div class="prod-card reveal">
+        <div class="prod-card-img">
+          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=500&q=75" alt="PVC Gypsum Ceiling" loading="lazy">
+          <span class="prod-card-num">10</span>
+        </div>
+        <div class="prod-card-body">
+          <div class="prod-card-name">PVC Facing Gypsum Ceiling</div>
+          <p class="prod-card-desc">Gypsum plasterboard, PVC facing and PET aluminized foils — used with T-Grid suspension systems especially in humid areas. Fast installation, low cost, excellent light reflectance.</p>
+          <div class="prod-card-tags"><span class="ptag">T-Grid System</span><span class="ptag">Humid Areas</span><span class="ptag">Light Reflectance</span></div>
+        </div>
+      </div>
+
+      <div class="prod-card reveal rd1">
+        <div class="prod-card-img">
+          <img src="https://images.unsplash.com/photo-1562664377-709f2c337eb2?w=500&q=75" alt="Metal Ceiling Tiles" loading="lazy">
+          <span class="prod-card-num">11</span>
+        </div>
+        <div class="prod-card-body">
+          <div class="prod-card-name">Metal Ceiling Tiles</div>
+          <p class="prod-card-desc">Secondary ceiling for residential and commercial applications. Available in Clip-In Concealed, Lay-In Exposed, Liner Strip, and High Quality Custom Made systems.</p>
+          <div class="prod-card-tags"><span class="ptag">Clip-In</span><span class="ptag">Lay-In</span><span class="ptag">Custom Made</span></div>
+        </div>
+      </div>
+
+      <div class="prod-card reveal rd2">
+        <div class="prod-card-img">
+          <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=500&q=75" alt="Mineral Fiber Tiles" loading="lazy">
+          <span class="prod-card-num">12</span>
+        </div>
+        <div class="prod-card-body">
+          <div class="prod-card-name">Mineral Fiber Tiles</div>
+          <p class="prod-card-desc">Made from naturally occurring and recycled materials. Excellent acoustic performance and fire resistance — offering a contemporary, attractive appearance with great functionality.</p>
+          <div class="prod-card-tags"><span class="ptag">Acoustic</span><span class="ptag">Fire Resistance</span><span class="ptag">Commercial</span></div>
+        </div>
+      </div>
+
+      <div class="prod-card reveal">
+        <div class="prod-card-img">
+          <div class="prod-card-img-placeholder">
+            <svg width="56" height="56" viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="16" stroke="#3B7DD8" stroke-width="2" opacity=".3"/><circle cx="28" cy="28" r="6" fill="#F5820A" opacity=".5"/><line x1="28" y1="12" x2="28" y2="20" stroke="#3B7DD8" stroke-width="2.5" opacity=".5" stroke-linecap="round"/><line x1="28" y1="36" x2="28" y2="44" stroke="#3B7DD8" stroke-width="2.5" opacity=".5" stroke-linecap="round"/><line x1="12" y1="28" x2="20" y2="28" stroke="#3B7DD8" stroke-width="2.5" opacity=".5" stroke-linecap="round"/><line x1="36" y1="28" x2="44" y2="28" stroke="#3B7DD8" stroke-width="2.5" opacity=".5" stroke-linecap="round"/></svg>
+          </div>
+          <span class="prod-card-num">13</span>
+        </div>
+        <div class="prod-card-body">
+          <div class="prod-card-name">Fixing Technology</div>
+          <p class="prod-card-desc">In coordination with Group CELO — profitable and efficient fixation solutions contributing to cost reduction of installations and assemblies for construction professionals.</p>
+          <div class="prod-card-tags"><span class="ptag">Group CELO</span><span class="ptag">Cost Effective</span><span class="ptag">Professional</span></div>
+        </div>
+      </div>
+
+      <div class="prod-card reveal rd1">
+        <div class="prod-card-img">
+          <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=500&q=75" alt="Block Plaster Accessories" loading="lazy">
+          <span class="prod-card-num">14</span>
+        </div>
+        <div class="prod-card-body">
+          <div class="prod-card-name">Block & Plaster Accessories</div>
+          <p class="prod-card-desc">SFSP Block Work and plaster accessories and masonry support — manufactured to specific project needs in conformity with international standards from best quality steel.</p>
+          <div class="prod-card-tags"><span class="ptag">SFSP</span><span class="ptag">Int'l Standards</span><span class="ptag">Best Steel</span></div>
+        </div>
+      </div>
+
+      <div class="prod-card reveal rd2">
+        <div class="prod-card-img">
+          <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=500&q=75" alt="Security Steel Doors" loading="lazy">
+          <span class="prod-card-num">15</span>
+        </div>
+        <div class="prod-card-body">
+          <div class="prod-card-name">Security Steel Doors</div>
+          <p class="prod-card-desc">Superior security and insulation. Can be painted to coordinate with any color scheme. Wide variety of panel designs and glass options available in steel edge.</p>
+          <div class="prod-card-tags"><span class="ptag">High Security</span><span class="ptag">Insulated</span><span class="ptag">Custom Finish</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- QUALITY -->
+<section id="quality">
+  <div class="q-inner">
+    <div>
+      <div class="section-label reveal">Quality Policy</div>
+      <h2 class="reveal rd1">Committed to <em>Excellence</em> in Every Supply</h2>
+      <p class="q-lead reveal rd2">Orascom Building & Construction Co. is committed to supplying the highest quality across all business areas — providing services that meet or exceed customer expectations and international standards.</p>
+      <div class="q-list reveal rd3">
+        <div class="q-item"><div class="q-icon"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7L5.5 10L11.5 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="q-text">Maintain records of a quality management system in accordance with international standards, regulations and directives.</div></div>
+        <div class="q-item"><div class="q-icon"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7L5.5 10L11.5 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="q-text">Ensure all staff are fully trained and understand their role in providing quality and good customer service.</div></div>
+        <div class="q-item"><div class="q-icon"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7L5.5 10L11.5 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="q-text">Provide services which fully meet customer requirements — cost-effective, safe and reliable.</div></div>
+        <div class="q-item"><div class="q-icon"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7L5.5 10L11.5 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="q-text">Ensure materials from suppliers are consistent and sufficient in quantity and quality at all times.</div></div>
+        <div class="q-item"><div class="q-icon"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7L5.5 10L11.5 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="q-text">Strive for continual improvement in performance, underpinned by the necessary financial resources and clear communications.</div></div>
+      </div>
+    </div>
+    <div class="reveal rd2">
+      <div class="iso-card">
+        <div class="iso-mark">ISO 9001</div>
+        <div class="iso-year">Quality Management System · 2008</div>
+        <div class="iso-divider"></div>
+        <p class="iso-body">Orascom Building & Construction Co. has been assessed by the Bureau of Assessment Services and attests that the organization complies with the requirements of the ISO 9001:2008 Quality Management System.</p>
+        <div class="iso-scope">
+          <div class="iso-scope-title">Certified Scope</div>
+          <div class="iso-scope-text">Supply & Installation of Specialized Building and Construction Materials.<br><span style="opacity:.65;font-size:11px">[EA/NACE: 28/43.29; 29/46.63 & 46.73]</span></div>
+        </div>
+        <div class="iso-footer">P.O. Box: 39391 · Office No. 1, 2nd Floor<br>Al-Hitmi Building, Salwa Road, State of Qatar<br>Certificate No: AE-BAS-Q0003277</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="con-inner">
+    <div>
+      <div class="section-label reveal">Get In Touch</div>
+      <h2 class="reveal rd1">Let's Build <em>Together</em></h2>
+      <p class="con-sub reveal rd2">Ready to source specialized building and construction materials for your Qatar project? Our team is ready to provide product information, competitive pricing and availability.</p>
+      <div class="con-details reveal rd3">
+        <div class="cdet">
+          <div class="cdet-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M14.3 11.5c-.6 0-1.2-.1-1.7-.3a.55.55 0 0 0-.57.14l-1.2 1.2A8.1 8.1 0 0 1 6.5 8.2l1.2-1.2A.55.55 0 0 0 7.84 6.4 5.1 5.1 0 0 1 7.6 4.7a.6.6 0 0 0-.6-.6H4.7a.6.6 0 0 0-.6.6C4.1 10.4 7.9 14.1 14.3 14.1a.6.6 0 0 0 .6-.6V12.1a.6.6 0 0 0-.6-.6Z" stroke="currentColor" stroke-width="1.5"/></svg></div>
+          <div><div class="cdet-label">Phone / Fax</div><div class="cdet-value">+974 4546 7876</div></div>
+        </div>
+        <div class="cdet">
+          <div class="cdet-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2.5 4.5h13a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-13a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.5"/><path d="m2 6 7 4.5L16 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+          <div><div class="cdet-label">Email</div><div class="cdet-value">sales@orascom-qa.com</div></div>
+        </div>
+        <div class="cdet">
+          <div class="cdet-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 1.5A5.25 5.25 0 0 0 3.75 6.75C3.75 11.25 9 16.5 9 16.5S14.25 11.25 14.25 6.75A5.25 5.25 0 0 0 9 1.5Z" stroke="currentColor" stroke-width="1.5"/><circle cx="9" cy="6.75" r="1.5" stroke="currentColor" stroke-width="1.5"/></svg></div>
+          <div><div class="cdet-label">Address</div><div class="cdet-value">Al Hitmi Building, 2nd Floor, Office No. 1<br>Salwa Road South, Doha – Qatar<br>P.O. Box: 39391</div></div>
+        </div>
+        <div class="cdet">
+          <div class="cdet-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M9 5v4l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+          <div><div class="cdet-label">Website</div><div class="cdet-value">www.orascom-qa.com</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="cform reveal rd2">
+      <div class="cform-title">Send an Inquiry</div>
+      <div class="fgrid">
+        <div class="fg"><label class="flabel">Full Name</label><input class="finput" type="text" placeholder="Your name"></div>
+        <div class="fg"><label class="flabel">Company</label><input class="finput" type="text" placeholder="Your company"></div>
+        <div class="fg"><label class="flabel">Email</label><input class="finput" type="email" placeholder="you@company.com"></div>
+        <div class="fg"><label class="flabel">Phone</label><input class="finput" type="tel" placeholder="+974 XXXX XXXX"></div>
+        <div class="fg full">
+          <label class="flabel">Product Interest</label>
+          <select class="fselect">
+            <option value="" disabled selected>Select a product</option>
+            <option>Gypsum Plasterboard</option><option>Gypsum Plaster</option>
+            <option>Fiber Cement Board</option><option>Drywall Metal Sections</option>
+            <option>Drywall Metal Accessories</option><option>Drywall Accessories</option>
+            <option>Access Panels</option><option>Jointing & Finishing Compound</option>
+            <option>Mineral Insulation</option><option>PVC Facing Gypsum Ceiling</option>
+            <option>Metal Ceiling Tiles</option><option>Mineral Fiber Tiles</option>
+            <option>Fixing Technology</option><option>Block & Plaster Accessories</option>
+            <option>Security Steel Doors</option><option>Multiple / General Inquiry</option>
+          </select>
+        </div>
+        <div class="fg full"><label class="flabel">Message</label><textarea class="ftextarea" placeholder="Tell us about your project and requirements..."></textarea></div>
+      </div>
+      <button class="fsubmit" onclick="handleSubmit()">Send Inquiry →</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-top">
+    <div>
+      <img src="orascom-logo-dark.png" alt="ORASCOM Building & Construction Co." style="height:48px;width:auto;display:block;margin-bottom:10px;filter:brightness(0) invert(1);">
+      <div class="foot-brand-sub" style="margin-top:0">Building & Construction Co. W.L.L · Qatar</div>
+      <p class="foot-brand-desc">Specialized supplier of building and construction materials in Qatar since 2010. ISO 9001:2008 certified — committed to excellence, integrity and service with pride.</p>
+    </div>
+    <div>
+      <div class="foot-col-title">Quick Links</div>
+      <ul class="foot-links">
+        <li><a href="#intro">About Us</a></li>
+        <li><a href="#why-qatar">Why Qatar</a></li>
+        <li><a href="#why-orascom">Why ORASCOM</a></li>
+        <li><a href="#products">Our Products</a></li>
+        <li><a href="#quality">Quality Policy</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="foot-col-title">Contact</div>
+      <div class="foot-contact-item"><a href="tel:+97445467876">+974 4546 7876</a></div>
+      <div class="foot-contact-item"><a href="mailto:sales@orascom-qa.com">sales@orascom-qa.com</a></div>
+      <div class="foot-contact-item">Al Hitmi Building, 2nd Floor, Office No. 1<br>Salwa Road South, Doha – Qatar</div>
+      <div class="foot-contact-item"><a href="http://www.orascom-qa.com">www.orascom-qa.com</a></div>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <p class="foot-copy">© 2025 Orascom Building & Construction Co. All rights reserved. · Doha, Qatar</p>
+    <span class="foot-iso">ISO 9001:2008 Certified</span>
+  </div>
+</footer>
+
+<script>
+const reveals=document.querySelectorAll('.reveal');
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}});
+},{threshold:0.08});
+reveals.forEach(el=>io.observe(el));
+
+window.addEventListener('scroll',()=>{
+  document.getElementById('navbar').style.boxShadow=
+    window.scrollY>60?'0 2px 24px rgba(13,43,78,0.14)':'0 1px 20px rgba(13,43,78,0.08)';
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}
+  });
+});
+
+function handleSubmit(){
+  alert('Thank you for your inquiry!\n\nOur team will be in touch shortly.\n\nEmail: sales@orascom-qa.com\nPhone: +974 4546 7876');
+}
+</script>
+</body>
+</html>
